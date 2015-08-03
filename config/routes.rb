@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
-  get "/auth/meetup/callback" => "sessions#create"
+  get 'auth/meetup/callback', to: 'sessions#create'
   get "/signout" => "sessions#destroy", :as => :signout
 
   # The priority is based upon order of creation: first created -> highest priority.

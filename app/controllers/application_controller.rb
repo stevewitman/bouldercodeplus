@@ -7,7 +7,6 @@ class ApplicationController < ActionController::Base
   private
 
   def current_user
-puts "* ** *** ****"
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 end
