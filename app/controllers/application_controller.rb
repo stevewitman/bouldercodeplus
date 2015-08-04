@@ -8,5 +8,7 @@ class ApplicationController < ActionController::Base
 
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    rescue ActiveRecord::RecordNotFound
+      # see http://stackoverflow.com/questions/8526082/couldnt-find-user-with-id-1 to redirect
   end
 end
