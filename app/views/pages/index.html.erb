@@ -4,7 +4,7 @@
     <%= current_user.name %> | <%= link_to "Sign Out", signout_path %>
     <br><br>
     <div>
-      Current User <%= current_user.name %>
+      Current User = <%= current_user.name %>
     </div>
     <div>
       Provider =  <%= current_user.provider %>
@@ -18,10 +18,10 @@
     <div>
       Updated At = <%= current_user.updated_at %>
     </div>
-    <br><br>
     <div>
-      Photo URL <%= current_user.photo_url %>
+      Photo URL = <%= current_user.photo_url %>
     </div>
+    <div class="avatar" style="background-image: url(<%= current_user.photo_url %>);">avatar</div>
 
   <% else %>
     <%= link_to "Sign in with Meetup.com", "/auth/meetup" %>
