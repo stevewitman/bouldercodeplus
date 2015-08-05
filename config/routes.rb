@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :activities
+
   root 'pages#index'
 
   get "/auth/meetup/callback" => "sessions#create"
