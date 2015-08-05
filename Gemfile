@@ -26,7 +26,7 @@ gem 'omniauth-meetup'
 
 gem 'firebase'
 
-gem 'rails_12factor', group: :production
+gem 'rails_12factor', group: :production 
 
 
 # Use ActiveModel has_secure_password

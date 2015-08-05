@@ -1,7 +1,5 @@
 class PagesController < ApplicationController
   def index
-    puts "@@@@@@@@@@@@@@@@@"
-    pp current_user
 
     base_uri = 'https://brilliant-fire-2881.firebaseio.com'
 
