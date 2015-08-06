@@ -1,1 +1,29 @@
 <h1>Activities</h1>
+<div>
+  <% if current_user %>
+    <%= current_user.name %> | <%= link_to "Sign Out", signout_path %>
+    <br><br>
+    <div>
+      Current User = <%= current_user.name %>
+    </div>
+    <div>
+      Provider =  <%= current_user.provider %>
+    </div>
+    <div>
+      UID = <%= current_user.uid %>
+    </div>
+    <div>
+      Created At = <%= current_user.created_at %>
+    </div>
+    <div>
+      Updated At = <%= current_user.updated_at %>
+    </div>
+    <div>
+      Photo URL = <%= current_user.photo_url %>
+    </div>
+    <div class="bcp-avatar" style="background-image: url(<%= current_user.photo_url %>);">avatar</div>
+
+  <% else %>
+    <%= link_to "Sign in with Meetup.com", "/auth/meetup" %>
+  <% end %>
+</div>
