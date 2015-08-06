@@ -7,6 +7,4 @@ Rails.application.routes.draw do
   get "/auth/meetup/callback" => "sessions#create"
   get "/signout" => "sessions#destroy", :as => :signout
 
-  get 'example' => 'example#index'
-
 end
