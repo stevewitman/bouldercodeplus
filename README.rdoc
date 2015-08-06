@@ -1,28 +1,26 @@
-== README
+STORIES
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
++ Members can login through Meetup.com
+  [http://www.rubydoc.info/gems/omniauth-meetup/0.0.7]
+  [http://railscasts.com/episodes/241-simple-omniauth-revised]
+..need to check data from meetup for changes and update user if necessary
 
-Things you may want to cover:
++ Members can logout
+..need to log user out of meetup or give warning since user is left logged into meetup.
 
-* Ruby version
+- Members(and anyone) can view all activities
+  [http://www.intridea.com/blog/2014/9/25/how-to-set-up-angular-with-rails]
 
-* System dependencies
+- Members(and anyone) can view details of an activity
 
-* Configuration
+- Members can add activities
 
-* Database creation
+- Member can edit their own activity
 
-* Database initialization
+- Member can change status to cancelled (change color)
 
-* How to run the test suite
+- Members can join activities
 
-* Services (job queues, cache servers, search engines, etc.)
+- Members can comment on activities
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+- Anyone can make general comments
