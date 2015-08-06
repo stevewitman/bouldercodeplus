@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
@@ -23,7 +24,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'omniauth-meetup'
 
-gem 'rails_12factor', group: :production
+gem 'firebase'
+
+gem 'rails_12factor', group: :production 
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -45,5 +49,4 @@ group :development, :test do
   gem 'spring'
 
   gem 'dotenv-rails'
-
 end
