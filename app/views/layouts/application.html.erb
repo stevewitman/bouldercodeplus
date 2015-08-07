@@ -32,10 +32,12 @@
             <li><%= link_to_unless_current("Plus (after-meetup)", activities_path) %></li>
             <li>
               <% if current_user %>
-                <%= link_to "Sign Out", signout_path %>
+                <%= link_to signout_path do %>
+                  Sign out <%= image_tag(current_user.photo_url, class: "bcp-logo-user") %>
+                <% end %>
               <% else %>
                 <%= link_to '/auth/meetup' do %>
-                  Sign in with <%= image_tag('logo-meetup.png', class: "bcp-meetup-logo") %>
+                  Sign in with <%= image_tag('logo-meetup.png', class: "bcp-logo-meetup") %>
                 <% end %>
               <% end %>
             </li>

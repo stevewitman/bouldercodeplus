@@ -1,49 +1,35 @@
-<div>
-  <h3 class="page-header">Propose a new "after-meetup" activity</h3>
-  <%= form_for @activity, :html => {:class => 'form-horizontal'} do |f| %>
-
-  <div class="col-sm-12 form-group">
-    <div class="col-sm-1 my-class-no-left-pad">
-        <%= f.label :date, :class => 'control-label' %>
-      </div>
-      <div class="col-sm-5">
-      08-08-2015
-      </div>
-      <div class="col-sm-6">
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-1">
-      <%= f.label :title, :class => 'control-label' %>
-    </div>
-    <div class="col-sm-5">
-      <%= f.text_field :title, :class => "form-control" %>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-1">
-      <%= f.label :description, :class => 'control-label' %>
-    </div>
-    <div class="col-sm-5">
-      <%= f.text_area :description, :class => "form-control" %>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-1">
-      <%= f.label :max, :class => 'control-label' %>
-    </div>
-    <div class="col-sm-5">
-      <%= f.text_field :max, :class => "form-control" %>
-    </div>
-  </div>
-
-
-  <div class="form-group">
-    <div class="col-sm-1">
-    </div>
-    <div class="col-sm-5">
-        <%= f.submit nil, :class => 'btn btn-default btn-primary' %>
-    </div>
-  </div>
+<%= page_header 'Add a new "after-meetup" activity' do %>
 <% end %>
+<div class="container">
+  <%= form_for @activity, :html => {:class => 'form-horizontal'} do |f| %>
+    <div class="row">
+      <div class="form-group col-sm-5">
+        <strong>Title:</strong>
+        <%= f.text_field :title, placeholder: 'example: "Lets go hike Mt.Cinitas"',:class => "form-control" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-sm-5">
+        <strong>Description:</strong>
+        <%= f.text_area :description, placeholder: 'example: "it takes about an hour and it is fairly steep"', :class => "form-control" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-sm-5">
+        <strong>Time to meet:</strong>
+        <%= f.text_field :meet_time, placeholder: 'example: "noon or 10 min after the meetup ends"', :class => "form-control" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-sm-5">
+        <strong>Place to meet:</strong>
+        <%= f.text_field :meet_place, placeholder: 'example: "in front of Ozo"', :class => "form-control" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-sm-5">
+        <%= f.submit nil, :class => 'btn btn-default btn-primary pull-right' %>
+      </div>
+    </div>
+  <% end %>
 </div>
