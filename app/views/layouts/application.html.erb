@@ -29,7 +29,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to_unless_current("Home", root_path) %></li>
             <li><%= link_to_unless_current("Contact", contact_path) %></li>
-            <li><%= link_to_unless_current("Plus (after-meetup)", activities_path) %></li>
+            <li><%= link_to_unless_current("Plus (after-meetup activities)", activities_path) %></li>
             <li>
               <% if current_user %>
                 <%= link_to signout_path do %>

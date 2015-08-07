@@ -3,13 +3,29 @@
 <% end %>
 
 <% @activities.each do |activity| %>
-  <div class="panel panel-default">
+  <div class="panel panel-primary">
     <div class="panel-heading">
       <h3 class="panel-title"><%= activity.title %></h3>
     </div>
     <div class="panel-body">
-      <%= activity.description %>
+      <strong>Meeting time:</strong> <%= activity.meet_time %><br>
+      <strong>Meeting place:</strong> <%= activity.meet_place %><br>
+      <% if activity.description %>
+        <br><strong>Details:</strong> <%= activity.description %><br>
+      <% end %>
     </div>
-    <div class="panel-footer"><%= activity.max %></div>
+    <div class="panel-footer clearfix">
+      <% if current_user %>
+        <span class="bcp-member">
+          <div class="bcp-avatar" style="background-image: url(<%= current_user.photo_url %>);"></div>
+          <!-- <div class="member-name">Steve Witman</div> -->
+        </span>
+
+
+      <% end %>
+      <span class="bcp-join">
+        <%= link_to 'Join in', root_path, class: "btn btn-success" %>
+      </span>
+    </div>
   </div>
 <% end %>

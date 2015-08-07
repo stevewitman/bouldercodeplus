@@ -13,7 +13,7 @@ class ActivitiesController < ApplicationController
   end
 
   def create
-    activity_params = params.require(:activity).permit(:user_id, :max, :title, :description, :date, :status)
+    activity_params = params.require(:activity).permit(:user_id, :max, :title, :description, :meet_time, :meet_place, :date, :status)
     @activity = Activity.new(activity_params)
     if @activity.save
       redirect_to activities_path, notice: 'Activity was successfully created'

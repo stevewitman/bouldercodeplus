@@ -3,33 +3,41 @@
 <div class="container">
   <%= form_for @activity, :html => {:class => 'form-horizontal'} do |f| %>
     <div class="row">
-      <div class="form-group col-sm-5">
+      <div class="form-group col-sm-9">
         <strong>Title:</strong>
         <%= f.text_field :title, placeholder: 'example: "Lets go hike Mt.Cinitas"',:class => "form-control" %>
       </div>
     </div>
     <div class="row">
-      <div class="form-group col-sm-5">
-        <strong>Description:</strong>
-        <%= f.text_area :description, placeholder: 'example: "it takes about an hour and it is fairly steep"', :class => "form-control" %>
-      </div>
-    </div>
-    <div class="row">
-      <div class="form-group col-sm-5">
+      <div class="form-group col-sm-9">
         <strong>Time to meet:</strong>
         <%= f.text_field :meet_time, placeholder: 'example: "noon or 10 min after the meetup ends"', :class => "form-control" %>
       </div>
     </div>
     <div class="row">
-      <div class="form-group col-sm-5">
+      <div class="form-group col-sm-9">
         <strong>Place to meet:</strong>
         <%= f.text_field :meet_place, placeholder: 'example: "in front of Ozo"', :class => "form-control" %>
       </div>
     </div>
     <div class="row">
-      <div class="form-group col-sm-5">
+      <div class="form-group col-sm-9">
+        <strong>Details:</strong>
+        <%= f.text_area :description, placeholder: 'example: "it takes about an hour and it is fairly steep"', :class => "form-control" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-sm-9">
         <%= f.submit nil, :class => 'btn btn-default btn-primary pull-right' %>
       </div>
     </div>
+    <div class="row">
+      <div class="form-group col-sm-9">
+        <em>
+          Note:<br>Currently this site only allows you to enter activities for today (Aug 8) ... soon it will allow you to create/propose activities for the future meetups or even for a different day.
+        </em>
+      </div>
+    </div>
   <% end %>
+
 </div>
