@@ -1,4 +1,6 @@
-<h3>After-meetup Activities</h3>
+<%= page_header "After-meetup Activities" do %>
+  <%= link_to 'Add New Activity', new_activity_path, class: "btn btn-warning float-right" %>
+<% end %>
 <div>
   <% if current_user %>
     <%= current_user.name %> | <%= link_to "Sign Out", signout_path %>

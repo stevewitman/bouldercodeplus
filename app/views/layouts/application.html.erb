@@ -23,13 +23,22 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><%= image_tag "bcp.jpg", class: "bcp-logo" %></a>
+          <a class="navbar-brand" href="#"><%= image_tag "logo-bcp.jpg", class: "bcp-logo" %></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><%= link_to_unless_current("Home", root_path) %></li>
-            <li><%= link_to_unless_current("After-meetup Activities", activities_path) %></li>
+            <li><%= link_to_unless_current("Home", root_path) %></li>
             <li><%= link_to_unless_current("Contact", contact_path) %></li>
+            <li><%= link_to_unless_current("Plus (after-meetup)", activities_path) %></li>
+            <li>
+              <% if current_user %>
+                <%= link_to "Sign Out", signout_path %>
+              <% else %>
+                <%= link_to '/auth/meetup' do %>
+                  Sign in with <%= image_tag('logo-meetup.png', class: "bcp-meetup-logo") %>
+                <% end %>
+              <% end %>
+            </li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
