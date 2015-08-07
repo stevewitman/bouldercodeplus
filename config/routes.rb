@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
+  get "contact" => "pages#contact", as: :contact
+
   get "/auth/meetup/callback" => "sessions#create"
   get "/signout" => "sessions#destroy", :as => :signout
 

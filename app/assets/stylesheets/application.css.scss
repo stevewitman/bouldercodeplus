@@ -5,6 +5,27 @@
   padding-top: 50px;
 }
 
+.bcp-logo {
+  height: 28px;
+}
+
+.navbar-brand {
+  padding-top: 10px;
+}
+
+.navbar-inverse {
+  background-color: #000;
+}
+
+.nav > li {
+  padding: 15px 20px;
+  color: #FFF;
+}
+
+.nav > li > a{
+  padding: 0px;
+}
+
 .bcp-avatar {
   /* make a square container */
   width: 50px;
