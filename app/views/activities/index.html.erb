@@ -27,3 +27,15 @@
     <%= link_to "Sign in with Meetup.com", "/auth/meetup" %>
   <% end %>
 </div>
+
+<% @activities.each do |activity| %>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title"><%= activity.title %></h3>
+    </div>
+    <div class="panel-body">
+      <%= activity.description %>
+    </div>
+    <div class="panel-footer"><%= activity.max %></div>
+  </div>
+<% end %>
