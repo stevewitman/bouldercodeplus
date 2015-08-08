@@ -1,12 +1,14 @@
 class MembershipsController < ApplicationController
 
   def create
-    @membership = Membership.new(:user_id => params[:user_id], :activity_id => params[:activity_id])
-    if @membership.save
-      redirect_to activities_path, notice: 'You have been added'
-    else
-      redirect_to activities_path, notice: 'error'
-    end
+
+      @membership = Membership.new(:user_id => params[:user_id], :activity_id => params[:activity_id])
+      if @membership.save
+        redirect_to activities_path, notice: 'You have been added'
+      else
+        redirect_to activities_path, notice: 'error'
+      end
+
   end
 
   def destroy
